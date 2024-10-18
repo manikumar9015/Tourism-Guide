@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking</title>
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <a href="#" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Restaurant Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php" aria-current="page">Home</a></li>
+                <!-- <li><a href="#">Menu</a></li> -->
+                <!-- <li><a href="#">Reservations</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons" style="visibility: hidden;">
+            <a href="#" class="cta"><button id="loginBtn">Login</button></a>
+        </div>
+    </header>
+    <main>
+        <section class="card-container">
+            <div class="card-row">
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">01</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Chaithrapura Beach</h2>
+                        <p class="card-description">
+                            Chaithrapura Beach, nestled along the captivating coastline of Mangalore, offers visitors a serene escape into nature's embrace. With its soft golden sands and tranquil turquoise waters, the beach provides a picturesque setting for relaxation and rejuvenation. Surrounded by lush greenery and swaying palm trees, Chaithrapura Beach exudes an aura of tranquility, inviting visitors to unwind and soak in the peaceful ambiance.
+                            
+                            </p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://www.brahmaritravels.com/uploads/image/tour-packages/attractive-beaches-to-visit-in-mangalore/chitrapura-beach.jpg" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="chaithrapuraBeach.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">02</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Kodical Beach</h2>
+                        <p class="card-description">Kodical Beach, located along the scenic coastline of Mangalore, is a serene retreat for those seeking solace amidst nature's beauty. With its soft golden sands and gentle waves lapping against the shore, the beach offers a tranquil setting for relaxation and leisurely strolls. Surrounded by lush greenery and swaying coconut palms, Kodical Beach exudes a peaceful ambiance, inviting visitors to unwind and reconnect with the natural world.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipMiUaDuL39DBo1-zBa-M-xHMzEdCAdil88pTk9F=s296-w296-h168-n-k-no-v1" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="kodicalbeach.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">03</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Tannirbhavi Beach</h2>
+                        <p class="card-description">Tannirbhavi Beach, nestled along the captivating coastline of Mangalore, presents a picturesque escape into nature's tranquility. With its soft golden sands and gentle waves caressing the shore, the beach offers a serene setting for relaxation and leisure activities. Framed by lush greenery and swaying coconut palms, Tannirbhavi Beach exudes a peaceful ambiance.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://travelwithkamath.com/wp-content/uploads/2023/06/Maravanthe-Beach.jpg" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="tannirbhaviBeach.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">04</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Panamburu Beach</h2>
+                        <p class="card-description">Panambur Beach, situated near Mangalore in Karnataka, India, is a popular coastal destination known for its pristine sandy shores and tranquil ambiance. Offering breathtaking views of the Arabian Sea, it attracts visitors with its inviting waters and opportunities for water sports such as jet skiing and banana boat rides. The beach is also renowned for its cleanliness and well-maintained facilities.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStadunnNkE3eNYsCAU_W55WLBRLWuingnC-7QGaet-Bw&s" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="Panamburu Beach.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="loginForm" method="post" action="login.php">
+                <div class="segment">
+                    <h1>Sign In</h1>
+                </div>
+                <label>
+                    <input type="email" placeholder="Email Address" id="emailInput" name="emailInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" id="passwordInput" name="passwordInput" required>
+                </label>
+                <div class="input-group">
+                    <select id="roleSelect" name="roleSelect" required>
+                        <option value="">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button class="red buttonlog" type="submit">
+                    <i class="icon ion-md-lock"></i> Login
+                </button>
+                <div class="segment">
+                    <p>Don't have an account? <a href="#" id="registerBtn">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Popup -->
+    <div id="registrationPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="registrationForm" method="post" action="register.php">
+                <div class="segment">
+                    <h1>Register</h1>
+                </div>
+                <label>
+                    <input type="text" placeholder="Full Name" id="nameInput" name="nameInput" required>
+                </label>
+                <label>
+                    <input type="email" placeholder="Email Address" id="emailRegInput" name="emailRegInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" id="passwordRegInput" name="passwordRegInput" required>
+                </label>
+                <button class="red buttonlog" type="submit">
+                    <i class="icon ion-md-lock"></i> Register
+                </button>
+                <div class="segment">
+                    <p>Already have an account? <a href="#" id="loginPopupBtn">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the login button, registration button, and popup elements
+var loginBtn = document.getElementById('loginBtn');
+var loginPopup = document.getElementById('loginPopup');
+var registrationPopup = document.getElementById('registrationPopup');
+var closeBtn = document.getElementsByClassName('close-btn');
+var registerBtn = document.getElementById('registerBtn');
+var loginPopupBtn = document.getElementById('loginPopupBtn');
+
+// Function to open the login popup
+function openLoginPopup() {
+    loginPopup.style.display = 'block';
+    registrationPopup.style.display = 'none';
+}
+
+// Function to open the registration popup
+function openRegistrationPopup() {
+    registrationPopup.style.display = 'block';
+    loginPopup.style.display = 'none';
+}
+
+// Function to close the login/registration popup
+function closePopup() {
+    loginPopup.style.display = 'none';
+    registrationPopup.style.display = 'none';
+}
+
+// Add event listeners
+loginBtn.addEventListener('click', openLoginPopup);
+registerBtn.addEventListener('click', openRegistrationPopup);
+for (var i = 0; i < closeBtn.length; i++) {
+    closeBtn[i].addEventListener('click', closePopup);
+}
+loginPopupBtn.addEventListener('click', openLoginPopup);
+
+// Close the popup when clicking outside of it
+window.addEventListener('click', function (event) {
+    if (event.target == loginPopup || event.target == registrationPopup) {
+        closePopup();
+    }
+});
+
+// Handle form submission
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var emailInput = document.getElementById('emailInput');
+    var passwordInput = document.getElementById('passwordInput');
+    var roleSelect = document.getElementById('roleSelect');
+
+    // Validate input
+    if (emailInput.value && passwordInput.value && roleSelect.value) {
+        if (roleSelect.value === 'admin') {
+            // Redirect to admin page
+            window.location.href = 'admin.html';
+        } else {
+            // Redirect to user page
+            window.location.href = 'user.html';
+        }
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+
+document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var nameInput = document.getElementById('nameInput');
+    var emailRegInput = document.getElementById('emailRegInput');
+    var passwordRegInput = document.getElementById('passwordRegInput');
+    var roleRegSelect = document.getElementById('roleRegSelect');
+
+    // Validate input
+    if (nameInput.value && emailRegInput.value && passwordRegInput.value && roleRegSelect.value) {
+        // Register the user
+        // Code to handle user registration goes here
+        console.log('User registered successfully!');
+        closePopup();
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+         // Get the modal and its elements
+         const modal = document.getElementById('reservationModal');
+        const closeButton = document.getElementsByClassName('close-button')[0];
+        const reserveButtons = document.querySelectorAll('.card-cta');
+        const costDisplay = document.getElementById('costDisplay');
+
+        // Function to calculate and display the cost
+        function displayCost() {
+            const guests = document.getElementById('guests').value;
+            const cost = guests * 50; // Assuming a cost of $50 per person
+            costDisplay.textContent = `Total Cost: $${cost}`;
+        }
+
+        // Function to open the modal
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Function to handle reservation submission
+        function reserveSeats(event) {
+            event.preventDefault(); // Prevent form submission
+            closeModal(); // Close the modal
+            alert("Seats reserved successfully"); // Display alert message
+        }
+
+        // Add event listeners
+        closeButton.addEventListener('click', closeModal);
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Add event listeners to the "Reserve Now" buttons
+        reserveButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                openModal();
+            });
+        });
+
+        // Add event listener to update the cost on input change
+        document.getElementById('guests').addEventListener('input', displayCost);
+
+        // Add event listener to the submit button inside the modal
+        document.querySelector('.modal button[type="submit"]').addEventListener('click', reserveSeats);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Destination</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #B38C4F; /* Metallic Gold */
+            --text-color: #212121; /* Dark Gray */
+            --secondary-text-color: #757575; /* Light Gray */
+            --bg-color: #F5F5F5; /* Light Background */
+        }
+
+        * {
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.3rem;
+            background-color: #FFFFFF; /* White */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            cursor: pointer;
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-color);
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding: 0 2rem;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            width: 60%;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .map-container {
+            width: 35%;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 15rem;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            border-radius: 5px;
+        }
+
+        .place-info {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .place-info h1 {
+            margin-top: 5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .place-info p {
+            font-size: 1.2rem;
+            color: var(--secondary-text-color);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+        .link{
+            text-align: center;
+            padding-top: 1rem;
+        }
+        .link a{
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+        .link a:hover,
+        .link a:focus {
+            color: var(--primary-color);
+        }   
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Page Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="place-info">
+        <h1>White Lotus Hotel</h1>
+        <p>Nestled amidst the vibrant streets of Udupi, the White Lotus Hotel beckons travelers seeking a comfortable and convenient stay.  This 3-star establishment has garnered a reputation for its warm hospitality, clean accommodations, and delicious on-site dining options, making it a popular choice for tourists and pilgrims alike.  Whether you're a devotee visiting the revered Krishna temples or a leisure traveler exploring the coastal town's charm, White Lotus Hotel promises a relaxing and enjoyable experience.</p>
+        <p>Step through the elegantly decorated reception area of White Lotus Hotel, and you'll be greeted by the friendly and professional staff.  Always ready to assist with check-in, answer your queries, or offer recommendations for navigating Udupi, they ensure a smooth and welcoming start to your stay.  Guest rooms at White Lotus Hotel prioritize comfort and functionality.  Expect spacious and well-maintained accommodations featuring air-conditioning, comfortable beds with fresh linens, and a television with cable channels for entertainment.  Online reviews consistently praise the hotel's cleanliness, making it a perfect haven for unwinding after a day of exploring Udupi's many attractions.
+        </p>
+        <p>Beyond the comfortable confines of your room, White Lotus Hotel offers a variety of amenities to enhance your stay.  The hotel boasts two on-site restaurants, catering to diverse palates.  "Mayuri," the vegetarian restaurant, is highly acclaimed for its delicious South Indian fare, allowing you to savor the region's culinary heritage.  For those seeking a wider variety, the non-vegetarian restaurant offers a delectable selection of dishes.  Both restaurants are known for their prompt service and generous portions, ensuring a satisfying dining experience.  Additionally, the hotel might feature a well-equipped business center, perfect for catching up on work tasks, and laundry services for added convenience.</p>
+        <p>White Lotus Hotel's strategic location adds to its appeal.  The hotel is situated within a walkable distance of the famed Sri Krishna Temple, a major draw for pilgrims visiting Udupi.  Easy access to bus stands and other landmarks allows for convenient exploration of the town.  For those seeking to venture beyond Udupi, the hotel's proximity to the highway provides a convenient starting point for exploring the scenic coastal region of Karnataka.periencing the rich cultural and spiritual tapestry of Udupi.</p>
+        <p>White Lotus Hotel might not be the most luxurious option in Udupi; however, it offers a compelling proposition for a variety of travelers.  With its friendly service, comfortable accommodations, and delectable on-site dining options, White Lotus Hotel provides a relaxing and enjoyable haven in the heart of Udupi.  Whether you're a pilgrim seeking a convenient base near the temple, a budget-conscious traveler exploring the coast, or a family on a vacation, White Lotus Hotel caters to your needs, allowing you to focus on experiencing the cultural and spiritual treasures of Udupi.</p>
+    </div>
+
+    <div class="content-container">
+        <div class="photo-gallery">
+            <img src="udupi1.jpg" alt="Udupi Photo 1" data-src="https://gos3.ibcdn.com/d21905cc85b411e8aec80224510f5e5b.jpg">
+            <img src="placeholder.jpg" alt="Udupi Photo 2" data-src="https://q-xx.bstatic.com/xdata/images/hotel/max500/123903892.jpg?k=b936e840f2a8dba089761881b94853ced70fcbabd8bb95b5cf4f4c9e3ca1bdb1&o=">
+            <img src="placeholder.jpg" alt="Udupi Photo 3" data-src="https://cf.bstatic.com/xdata/images/hotel/max500/122023609.jpg?k=21ee7a386ebe13d2ae1b9305a68087ea96f6a4927f866719179d016743ad97c0&o=&hp=1">
+            <img src="placeholder.jpg" alt="Udupi Photo 4" data-src="https://q-xx.bstatic.com/xdata/images/hotel/max500/153003467.jpg?k=db0670947ca9dcdf39c20d98fba1bc4cd28e00f57faff053303bb187ca613c04&o=">
+        </div>
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="link">
+                <a href="https://www.google.com/maps/place/White+Lotus+Hotel/@13.3440478,74.7466692,17z/data=!4m9!3m8!1s0x3bbcbbccc6ca125d:0xcbfb8154dfc5d415!5m2!4m1!1i2!8m2!3d13.3440478!4d74.7492441!16s%2Fg%2F11f_p5j6h0?entry=ttu">Visit Map</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Lazy load images
+        const images = document.querySelectorAll('.photo-gallery img');
+
+        function lazyLoad() {
+            images.forEach(img => {
+                if (img.getBoundingClientRect().top <= window.innerHeight && img.getAttribute('src') !== img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+            });
+        }
+
+        window.addEventListener('scroll', lazyLoad);
+        lazyLoad(); // Load initial images
+
+        // Google Maps Embed API
+        function initMap() {
+            const mapContainer = document.getElementById('map');
+            const mapOptions = {
+                center:  { lat: 13.344225252930404,  lng:74.74916899371891 }, // Woodlands Restaurant location
+                zoom: 15,
+            };
+            const map = new google.maps.Map(mapContainer, mapOptions);
+
+            const marker = new google.maps.Marker({
+                position: { lat: 13.344225252930404,  lng:74.74916899371891 },
+                map: map,
+                title: 'White Lotus Hotel',
+            });
+        }
+// 13.344225252930404, 74.74916899371891
+        // Load the Google Maps Embed API script with your API key
+        function loadGoogleMapsAPI() {
+            const apiKey = 'AIzaSyDtRnSSlT48kBs7t2cJbnq51OWV5De_30c'; // Replace with your Google Maps API key
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+            script.async = true;
+            document.body.appendChild(script);
+        }
+
+        // Call the loadGoogleMapsAPI function to initialize the map
+        loadGoogleMapsAPI();
+    </script>
+</body>
+</html>

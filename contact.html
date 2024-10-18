@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Tourism Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #B38C4F; /* Metallic Gold */
+            --text-color: #212121; /* Dark Gray */
+            --secondary-text-color: #757575; /* Light Gray */
+            --bg-color: #F5F5F5; /* Light Background */
+        }
+
+        * {
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.3rem;
+            background-color: #FFFFFF; /* White */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            cursor: pointer;
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3rem;
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        .contact-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: var(--secondary-text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover,
+        .contact-info a:focus {
+            color: #8d6a38;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="login1.php" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Page Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <img src="chethan.jpg" alt="Chethan">
+            <div class="contact-info">
+                <h3>Chethan</h3>
+                <p>USN: NNM23IS504</p>
+                <p>Phone: +91 7338221281</p>
+                <a href="mailto:nnm23is504@nmamit.in">nnm23is504@nmamit.in</a>
+            </div>
+        </div>
+        <div class="contact-card">
+            <img src="joyal1.jpg" alt="Joyal Quadras">
+            <div class="contact-info">
+                <h3>Joyal Quadras</h3>
+                <p>USN: NNM23IS508</p>
+                <p>Phone: +91 8861623546</p>
+                <a href="mailto:nnm23is508@nmamit.in">nnm23is508@nmamit.in</a>
+            </div>
+        </div>
+        <div class="contact-card">
+            <img src="mani.jpg" alt="Mani Kumar">
+            <div class="contact-info">
+                <h3>Mani Kumar</h3>
+                <p>USN: NNM23IS509</p>
+                <p>Phone: +91 9019950427</p>
+                <a href="mailto:nnm23is509@nmamit.in">nnm23is509@nmamit.in</a>
+            </div>
+        </div>
+        <div class="contact-card">
+            <img src="sambhram.jpg" alt="Sambhram Shetty">
+            <div class="contact-info">
+                <h3>Sambhram Shetty</h3>
+                <p>USN: NNM23IS512</p>
+                <p>Phone: +91 7259171364</p>
+                <a href="mailto:nnm23is512@nmamit.in">nnm23is512@nmamit.in</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

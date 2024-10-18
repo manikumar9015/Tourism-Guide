@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Destination</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #B38C4F; /* Metallic Gold */
+            --text-color: #212121; /* Dark Gray */
+            --secondary-text-color: #757575; /* Light Gray */
+            --bg-color: #F5F5F5; /* Light Background */
+        }
+
+        * {
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.3rem;
+            background-color: #FFFFFF; /* White */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            cursor: pointer;
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-color);
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding: 0 2rem;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            width: 60%;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .map-container {
+            width: 35%;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 15rem;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            border-radius: 5px;
+        }
+
+        .place-info {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .place-info h1 {
+            margin-top: 5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .place-info p {
+            font-size: 1.2rem;
+            color: var(--secondary-text-color);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+        .link{
+            text-align: center;
+            padding-top: 1rem;
+        }
+        .link a{
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+        .link a:hover,
+        .link a:focus {
+            color: var(--primary-color);
+        }   
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Page Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="place-info">
+        <h1>Shettys Lunch Home</h1>
+        <p>There are several restaurants in Karnataka named Shetty Lunch Home, so pinpointing the exact one depends on your location. However, based on what I found, Shetty Lunch Home appears to be a popular chain of restaurants in the region, known for its delicious South Indian fare. One branch is located near Bailur, Karnataka, and boasts a 4.2 star rating on Google with positive reviews praising the food quality. They seem to be open from 9 am to 5 pm daily this week.</p>
+        <p>Another possibility is Shetty Lunch Home, Uchila, which has a perfect 5-star rating and extended hours, opening from 11 am to 9:30 pm. With a higher rating and wider time slot, this location might be a more attractive option. Both restaurants likely offer a similar menu focused on South Indian specialties. You might find items like masala dosa, ghee roast, and filter coffee, along with potentially some seafood dishes depending on the location.</p>
+    </div>
+
+    <div class="content-container">
+        <div class="photo-gallery">
+            <img src="udupi1.jpg" alt="Udupi Photo 1" data-src="https://lh3.googleusercontent.com/p/AF1QipN0vOSMqQcPFSldKfD0jTIzqT4Ya1VAYAJquMLU=s680-w680-h510">
+            <img src="placeholder.jpg" alt="Udupi Photo 2" data-src="https://lh5.googleusercontent.com/p/AF1QipNkkRtzDuygfRfKdEGweF50FR5FJ-oQpaO4pfVk=w101-h126-n-k-no-nu">
+            <img src="placeholder.jpg" alt="Udupi Photo 3" data-src="https://assets.cntraveller.in/photos/622b5796652e69e3c9cd5377/master/w_1600,c_limit/Shetty%20Lunch%20Home%20Ghee%20Roast.jpg">
+            <img src="placeholder.jpg" alt="Udupi Photo 4" data-src="https://lh3.googleusercontent.com/p/AF1QipOG22moPukgpDCGl-Fek6wPLhtt_0lyjNBkI9S7=s680-w680-h510">
+        </div>
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="link">
+                <a href="https://maps.app.goo.gl/J4TTWgVYuoypPVdi6">Visit Map</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Lazy load images
+        const images = document.querySelectorAll('.photo-gallery img');
+
+        function lazyLoad() {
+            images.forEach(img => {
+                if (img.getBoundingClientRect().top <= window.innerHeight && img.getAttribute('src') !== img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+            });
+        }
+
+        window.addEventListener('scroll', lazyLoad);
+        lazyLoad(); // Load initial images
+
+        // Google Maps Embed API
+        function initMap() {
+            const mapContainer = document.getElementById('map');
+            const mapOptions = {
+                center:{ lat:  13.371243630571655, lng: 74.75329915055447 }, // Woodlands Restaurant location
+                zoom: 15,
+            };
+            const map = new google.maps.Map(mapContainer, mapOptions);
+
+            const marker = new google.maps.Marker({
+                position: { lat:  13.371243630571655, lng: 74.75329915055447 },
+                map: map,
+                title: 'Shettys Lunch Home udupi',
+            });
+        }
+//   
+        // Load the Google Maps Embed API script with your API key
+        function loadGoogleMapsAPI() {
+            const apiKey = 'AIzaSyDtRnSSlT48kBs7t2cJbnq51OWV5De_30c'; // Replace with your Google Maps API key
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+            script.async = true;
+            document.body.appendChild(script);
+        }
+
+        // Call the loadGoogleMapsAPI function to initialize the map
+        loadGoogleMapsAPI();
+    </script>
+</body>
+</html>

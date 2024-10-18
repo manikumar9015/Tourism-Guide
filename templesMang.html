@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking</title>
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <a href="#" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Restaurant Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php" aria-current="page">Home</a></li>
+                <!-- <li><a href="#">Menu</a></li> -->
+                <!-- <li><a href="#">Reservations</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons" style="visibility: hidden;">
+            <a href="#" class="cta"><button id="loginBtn">Login</button></a>
+        </div>
+    </header>
+    <main>
+        <section class="card-container">
+            <div class="card-row">
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">01</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Kadri Shree Manjunatha Temple</h2>
+                        <p class="card-description">The Kadri Shree Manjunatha Temple, located atop the Kadri Hill in Mangalore, Karnataka, is one of the oldest and most revered Hindu temples in the region. Dedicated to Lord Manjunatha, a manifestation of Lord Shiva, this temple holds immense religious significance and attracts devotees from far and wide.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://www.karnataka.com/wp-content/uploads/2009/02/500706330_44ed1e01ed_z.jpg" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="kadri.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">02</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Kudroli Gokarnath Temple</h2>
+                        <p class="card-description">
+                            The Kudroli Gokarnath Temple, situated in Mangalore, Karnataka, is a revered Hindu temple dedicated to Lord Gokarnatheshwara, a form of Lord Shiva. Established by Narayana Guru, a prominent social reformer and spiritual leader, the temple holds significant religious and cultural importance in the region.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="data:image/jpeg;base64,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" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="kudroli.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">03</span>
+                    <div class="card-content">
+                        <h2 class="card-title">ISKCON Temple Mangalore</h2>
+                        <p class="card-description">The ISKCON (International Society for Krishna Consciousness) Temple in Mangalore is a vibrant center of spiritual and cultural activities dedicated to Lord Krishna, the Supreme Personality of Godhead. Situated in the heart of the city, this temple is a focal point for devotees and visitors seeking spiritual enrichment and cultural immersion.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://iskconmangalore.org/assets/images/sevacategory/1690910426.webp" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="iskcon.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">04</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Sri Mangaladevi Temple, Mangalore</h2>
+                        <p class="card-description">The Sri Mangaladevi Temple in Mangalore, Karnataka, is a revered Hindu temple dedicated to Goddess Mangaladevi, the presiding deity of the city from which Mangalore derives its name. Situated in the heart of the city, this ancient temple holds immense religious significance and cultural heritage.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://im.hunt.in/cg/mangalore/City-Guide/devi1.jpg" class="tcard-image">
+                    </figure>
+                    <a href="mangaladevi.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <!-- <article class="card">
+                    <span class="card-number" aria-label="Card Number">04</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Kollur Temple</h2>
+                        <p class="card-description">
+                            The Kollur Mookambika Temple, situated in Kollur, Karnataka, is one of the most revered Hindu temples dedicated to Goddess Mookambika, an incarnation of Goddess Parvati. Nestled amidst the picturesque Western Ghats, this ancient temple holds immense spiritual significance and attracts devotees from all over the country.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOfdAqsA4d2J8BF9aY-mB9Oyhldv4GslW2CsQ7T-Y8tw&s" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="kollour.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article> -->
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="loginForm" method="post" action="login.php">
+                <div class="segment">
+                    <h1>Sign In</h1>
+                </div>
+                <label>
+                    <input type="email" placeholder="Email Address" id="emailInput" name="emailInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" id="passwordInput" name="passwordInput" required>
+                </label>
+                <div class="input-group">
+                    <select id="roleSelect" name="roleSelect" required>
+                        <option value="">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button class="red buttonlog" type="submit">
+                    <i class="icon ion-md-lock"></i> Login
+                </button>
+                <div class="segment">
+                    <p>Don't have an account? <a href="#" id="registerBtn">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Popup -->
+    <div id="registrationPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="registrationForm" method="post" action="register.php">
+                <div class="segment">
+                    <h1>Register</h1>
+                </div>
+                <label>
+                    <input type="text" placeholder="Full Name" id="nameInput" name="nameInput" required>
+                </label>
+                <label>
+                    <input type="email" placeholder="Email Address" id="emailRegInput" name="emailRegInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" id="passwordRegInput" name="passwordRegInput" required>
+                </label>
+                <button class="red buttonlog" type="submit">
+                    <i class="icon ion-md-lock"></i> Register
+                </button>
+                <div class="segment">
+                    <p>Already have an account? <a href="#" id="loginPopupBtn">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the login button, registration button, and popup elements
+var loginBtn = document.getElementById('loginBtn');
+var loginPopup = document.getElementById('loginPopup');
+var registrationPopup = document.getElementById('registrationPopup');
+var closeBtn = document.getElementsByClassName('close-btn');
+var registerBtn = document.getElementById('registerBtn');
+var loginPopupBtn = document.getElementById('loginPopupBtn');
+
+// Function to open the login popup
+function openLoginPopup() {
+    loginPopup.style.display = 'block';
+    registrationPopup.style.display = 'none';
+}
+
+// Function to open the registration popup
+function openRegistrationPopup() {
+    registrationPopup.style.display = 'block';
+    loginPopup.style.display = 'none';
+}
+
+// Function to close the login/registration popup
+function closePopup() {
+    loginPopup.style.display = 'none';
+    registrationPopup.style.display = 'none';
+}
+
+// Add event listeners
+loginBtn.addEventListener('click', openLoginPopup);
+registerBtn.addEventListener('click', openRegistrationPopup);
+for (var i = 0; i < closeBtn.length; i++) {
+    closeBtn[i].addEventListener('click', closePopup);
+}
+loginPopupBtn.addEventListener('click', openLoginPopup);
+
+// Close the popup when clicking outside of it
+window.addEventListener('click', function (event) {
+    if (event.target == loginPopup || event.target == registrationPopup) {
+        closePopup();
+    }
+});
+
+// Handle form submission
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var emailInput = document.getElementById('emailInput');
+    var passwordInput = document.getElementById('passwordInput');
+    var roleSelect = document.getElementById('roleSelect');
+
+    // Validate input
+    if (emailInput.value && passwordInput.value && roleSelect.value) {
+        if (roleSelect.value === 'admin') {
+            // Redirect to admin page
+            window.location.href = 'admin.html';
+        } else {
+            // Redirect to user page
+            window.location.href = 'user.html';
+        }
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+
+document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var nameInput = document.getElementById('nameInput');
+    var emailRegInput = document.getElementById('emailRegInput');
+    var passwordRegInput = document.getElementById('passwordRegInput');
+    var roleRegSelect = document.getElementById('roleRegSelect');
+
+    // Validate input
+    if (nameInput.value && emailRegInput.value && passwordRegInput.value && roleRegSelect.value) {
+        // Register the user
+        // Code to handle user registration goes here
+        console.log('User registered successfully!');
+        closePopup();
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+         // Get the modal and its elements
+         const modal = document.getElementById('reservationModal');
+        const closeButton = document.getElementsByClassName('close-button')[0];
+        const reserveButtons = document.querySelectorAll('.card-cta');
+        const costDisplay = document.getElementById('costDisplay');
+
+        // Function to calculate and display the cost
+        function displayCost() {
+            const guests = document.getElementById('guests').value;
+            const cost = guests * 50; // Assuming a cost of $50 per person
+            costDisplay.textContent = `Total Cost: $${cost}`;
+        }
+
+        // Function to open the modal
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Function to handle reservation submission
+        function reserveSeats(event) {
+            event.preventDefault(); // Prevent form submission
+            closeModal(); // Close the modal
+            alert("Seats reserved successfully"); // Display alert message
+        }
+
+        // Add event listeners
+        closeButton.addEventListener('click', closeModal);
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Add event listeners to the "Reserve Now" buttons
+        reserveButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                openModal();
+            });
+        });
+
+        // Add event listener to update the cost on input change
+        document.getElementById('guests').addEventListener('input', displayCost);
+
+        // Add event listener to the submit button inside the modal
+        document.querySelector('.modal button[type="submit"]').addEventListener('click', reserveSeats);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Tourism Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #B38C4F; /* Metallic Gold */
+            --text-color: #212121; /* Dark Gray */
+            --secondary-text-color: #757575; /* Light Gray */
+            --bg-color: #F5F5F5; /* Light Background */
+        }
+
+        * {
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.3rem;
+            background-color: #FFFFFF; /* White */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            cursor: pointer;
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-color);
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            text-align: justify;
+        }
+
+        .content-container h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .content-container p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .content-container a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .content-container a:hover,
+        .content-container a:focus {
+            color: #8d6a38;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="login1.php" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Page Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php">Home</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-container">
+        <h1>About Our Tourism Website</h1>
+        <p>Welcome to our tourism website, your one-stop destination for exploring the vibrant cities of Mangalore and Udupi. Our platform is designed to provide you with a seamless and enriching travel experience, catering to all your needs.</p>
+        <p>At the heart of our website lies a focus on showcasing the rich cultural heritage, diverse cuisines, and breathtaking natural landscapes that these regions have to offer. Whether you're a history enthusiast, a nature lover, or a foodie, you'll find a wealth of information and recommendations to make the most of your visit.</p>
+        <p>One of the key features of our website is the restaurant booking system. We understand the importance of having a hassle-free dining experience, which is why we've partnered with some of the finest restaurants in Mangalore and Udupi. With just a few clicks, you can reserve your table at your desired eatery, ensuring a memorable culinary journey.</p>
+        <p>But our website goes beyond just restaurant bookings. We've meticulously curated detailed guides and information on the top tourist attractions, hidden gems, and must-visit locations in both Mangalore and Udupi. From the iconic Sri Krishna Matha Temple in Udupi to the serene beaches of Mangalore, we've got you covered with insider tips and recommendations to make the most of your trip.</p>
+        <p>Our team of travel enthusiasts and local experts is dedicated to providing you with a comprehensive and personalized travel experience. Whether you're planning a solo adventure, a family getaway, or a group trip, we're here to help you create lasting memories.</p>
+        <p>So, what are you waiting for? Start exploring the wonders of Mangalore and Udupi with our tourism website. Let us be your guide to unlocking the true essence of these captivating destinations. <a href="login1.php">Get started now</a>!</p>
+    </div>
+</body>
+</html>

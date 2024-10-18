@@ -1,0 +1,464 @@
+/* Reset and Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #B38C4F; /* Metallic Gold */
+    --text-color: #212121; /* Dark Gray */
+    --secondary-text-color: #757575; /* Light Gray */
+    --bg-color: #F5F5F5; /* Light Background */
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    background-color: #FFFFFF; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    cursor: pointer;
+    height: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Increased spacing */
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--primary-color);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* White */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover,
+button:focus {
+    background-color: #A07B44; /* Darker Metallic Gold */
+    color: #FFFFFF; /* White */
+}
+
+/* Card Styles */
+.card-container {
+    max-width: 80rem;
+    padding-inline: 1rem;
+    margin: 6rem auto 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    row-gap: 2.5rem;
+    padding-block: 1.625rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 0.2rem;
+    /* padding-right: 0.2rem; */
+}
+
+.card:last-of-type {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card-number {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.card-title {
+    font-size: clamp(1.125rem, 2.5vw, 2rem);
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.card-description {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    line-height: 1.2;
+    color: var(--secondary-text-color);
+}
+
+.card-image-wrapper {
+    display: none;
+}
+
+.card-cta {
+    grid-column: 2 / -1;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    height: 3.375rem;
+    padding-inline: 1.6875rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.card-cta:hover,
+.card-cta:focus {
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* White */
+}
+
+.card-cta-icon {
+    transition: transform 0.3s ease;
+}
+
+.card-cta:hover .card-cta-icon,
+.card-cta:focus .card-cta-icon {
+    transform: translateX(3px);
+}
+
+/* Responsive Styles */
+@media (min-width: 48rem) {
+    .card {
+        grid-template-columns: 0.25fr 1fr 0.5fr;
+        align-items: center;
+        row-gap: 0;
+    }
+
+    .card-cta {
+        grid-column: initial;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 80em) {
+    .card {
+        position: relative;
+        grid-template-columns: 0.25fr 1fr 1rem 17rem 1.5rem auto;
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 50%;
+        translate: -50% 0;
+        width: 120%;
+        height: 100%;
+        background-color: var(--primary-color);
+        border-radius: 0.5rem;
+        opacity: 0;
+        transition: opacity 250ms;
+    }
+
+    .card:hover::before,
+    .card:focus-within::before {
+        opacity: 0.1;
+    }
+
+    .card-number,
+    .card-description {
+        transition: color 250ms;
+    }
+
+    .card-title {
+        transition: color 250ms;
+    }
+
+    .card:hover .card-title,
+    .card:focus-within .card-title {
+        color: var(--primary-color);
+    }
+
+    .card:hover .card-number,
+    .card:hover .card-description,
+    .card:focus-within .card-number,
+    .card:focus-within .card-description {
+        color: var(--text-color);
+    }
+
+    .card-image-wrapper {
+        grid-column: 4 / 5;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: -480px;
+        translate: 0 -50%;
+        scale: 0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: scale 250ms, opacity 250ms, visibility 250ms;
+    }
+
+    .card:hover .card-image-wrapper,
+    .card:focus-within .card-image-wrapper {
+        scale: 0.2;
+        opacity: 1;
+        visibility: visible;
+        left: -480px;
+        border: none;
+        border-radius: 10px;
+        z-index: 10000;
+    }
+
+    .card-cta {
+        grid-column: 6 / -1;
+        border-radius: 10px;
+    }
+
+    .card:hover .card-cta,
+    .card:focus-within .card-cta {
+        background-color: var(--primary-color);
+        color: #FFFFFF; /* White */
+    }
+}
+
+/* Restaurant Card Styles */
+.restaurant-card {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
+    row-gap: 2.5rem;
+    padding-block: 1.625rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 0.2rem;
+}
+
+.restaurant-number {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.restaurant-title {
+    font-size: clamp(1.125rem, 2.5vw, 2rem);
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.restaurant-description {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    line-height: 1.2;
+    color: var(--secondary-text-color);
+}
+
+.restaurant-image-wrapper {
+    display: none;
+}
+
+.restaurant-cta {
+    grid-column: 2 / -1;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    height: 3.375rem;
+    padding-inline: 1.6875rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.restaurant-cta:hover,
+.restaurant-cta:focus {
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* White */
+}
+
+.restaurant-cta-icon {
+    transition: transform 0.3s ease;
+}
+
+.restaurant-cta:hover .restaurant-cta-icon,
+.restaurant-cta:focus .restaurant-cta-icon {
+    transform: translateX(3px);
+}
+
+/* Temple Card Styles */
+.temple-card {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
+    row-gap: 2.5rem;
+    padding-block: 1.625rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 0.2rem;
+}
+
+.temple-number {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.temple-title {
+    font-size: clamp(1.125rem, 2.5vw, 2rem);
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.temple-description {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    line-height: 1.2;
+    color: var(--secondary-text-color);
+}
+
+.temple-image-wrapper {
+    display: none;
+}
+
+.temple-cta {
+    grid-column: 2 / -1;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    height: 3.375rem;
+    padding-inline: 1.6875rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.temple-cta:hover,
+.temple-cta:focus {
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* White */
+}
+
+.temple-cta-icon {
+    transition: transform 0.3s ease;
+}
+
+.temple-cta:hover .temple-cta-icon,
+.temple-cta:focus .temple-cta-icon {
+    transform: translateX(3px);
+}
+
+/* Beach Card Styles */
+.beach-card {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
+    row-gap: 2.5rem;
+    padding-block: 1.625rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 0.2rem;
+}
+
+.beach-number {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.beach-title {
+    font-size: clamp(1.125rem, 2.5vw, 2rem);
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.beach-description {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    line-height: 1.2;
+    color: var(--secondary-text-color);
+}
+
+.beach-image-wrapper {
+    display: none;
+}
+
+.beach-cta {
+    grid-column: 2 / -1;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    height: 3.375rem;
+    padding-inline: 1.6875rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.beach-cta:hover,
+.beach-cta:focus {
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* White */
+}
+
+.beach-cta-icon {
+    transition: transform 0.3s ease;
+}
+
+.beach-cta:hover .beach-cta-icon,
+.beach-cta:focus .beach-cta-icon {
+    transform: translateX(3px);
+}

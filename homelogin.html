@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Destinations</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Page Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" aria-current="page">Home</a></li>
+                <!-- <li><a href="#">Menu</a></li> -->
+                <!-- <li><a href="#">Reservations</a></li> -->
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons">
+            <a href="#" class="cta"><button id="loginBtn">Login</button></a>
+        </div>
+    </header>
+    <main>
+        <section class="card-container">
+            <div class="card-row">
+                <article class="card full-width">
+                    <div class="card-content">
+                        <h2 class="card-title">Udupi</h2>
+                        <p class="card-description">Explore the vibrant coastal town of Udupi, known for its rich
+                            cultural heritage, delectable cuisine, and serene beaches.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="Udupi.jpeg" alt="Udupi City" class="card-image">
+                        <div class="card-image-overlay">Udupi</div>
+                    </figure>
+                    <a href="udupi.html" class="card-cta" aria-label="Learn more about Udupi">
+                        Discover Udupi
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card full-width">
+                    <div class="card-content">
+                        <h2 class="card-title">Mangalore</h2>
+                        <p class="card-description">Uncover the captivating charm of Mangalore, a city that seamlessly
+                            blends history, culture, and natural beauty.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="mng.jpeg" alt="Mangalore City" class="card-image">
+                        <div class="card-image-overlay">Mangalore</div>
+                    </figure>
+                    <a href="mangalore.html" class="card-cta" aria-label="Learn more about Mangalore">
+                        Explore Mangalore
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+       <!-- Login Popup -->
+       <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="loginForm" action="login.php" method="post">
+                <div class="segment">
+                    <h1>Sign In</h1>
+                </div>
+                <label>
+                    <input type="email" placeholder="Email Address" name="email" id="emailInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" name="password" id="passwordInput" required>
+                </label>
+                <div class="input-group">
+                    <select name="role" id="roleSelect" required>
+                        <option value="">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button class="red buttonlog" type="submit">
+                    <i class="icon ion-md-lock"></i> Login
+                </button>
+                <div class="segment">
+                    <p>Don't have an account? <a href="#" id="registerBtn">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Registration Popup -->
+    <div id="registrationPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form>
+                <div class="segment">
+                    <h1>Register</h1>
+                </div>
+                <label>
+                    <input type="text" placeholder="Full Name" id="nameInput" required>
+                </label>
+                <label>
+                    <input type="email" placeholder="Email Address" id="emailRegInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" id="passwordRegInput" required>
+                </label>
+                <div class="input-group">
+                    <select id="roleRegSelect" required>
+                        <option value="">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button class="red buttonlog" type="button" id="registerBtn">
+                    <i class="icon ion-md-lock"></i> Register
+                </button>
+                <div class="segment">
+                    <p>Already have an account? <a href="#" id="loginPopupBtn">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+  // Get references to the login button, registration button, and popup elements
+var loginBtn = document.getElementById('loginBtn');
+var loginPopup = document.getElementById('loginPopup');
+var registrationPopup = document.getElementById('registrationPopup');
+var closeBtn = document.getElementsByClassName('close-btn');
+var registerBtn = document.getElementById('registerBtn');
+var loginPopupBtn = document.getElementById('loginPopupBtn');
+
+// Function to open the login popup
+function openLoginPopup() {
+    loginPopup.style.display = 'block';
+    registrationPopup.style.display = 'none';
+}
+
+// Function to open the registration popup
+function openRegistrationPopup() {
+    registrationPopup.style.display = 'block';
+    loginPopup.style.display = 'none';
+}
+
+// Function to close the login/registration popup
+function closePopup() {
+    loginPopup.style.display = 'none';
+    registrationPopup.style.display = 'none';
+}
+
+// Add event listeners
+loginBtn.addEventListener('click', openLoginPopup);
+registerBtn.addEventListener('click', openRegistrationPopup);
+for (var i = 0; i < closeBtn.length; i++) {
+    closeBtn[i].addEventListener('click', closePopup);
+}
+loginPopupBtn.addEventListener('click', openLoginPopup);
+
+// Close the popup when clicking outside of it
+window.addEventListener('click', function (event) {
+    if (event.target == loginPopup || event.target == registrationPopup) {
+        closePopup();
+    }
+});
+
+// Handle form submission
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var emailInput = document.getElementById('emailInput');
+    var passwordInput = document.getElementById('passwordInput');
+    var roleSelect = document.getElementById('roleSelect');
+
+    // Validate input
+    if (emailInput.value && passwordInput.value && roleSelect.value) {
+        if (roleSelect.value === 'admin') {
+            // Redirect to admin page
+            window.location.href = 'admin.html';
+        } else {
+            // Redirect to user page
+            window.location.href = 'user.html';
+        }
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+
+document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var nameInput = document.getElementById('nameInput');
+    var emailRegInput = document.getElementById('emailRegInput');
+    var passwordRegInput = document.getElementById('passwordRegInput');
+    var roleRegSelect = document.getElementById('roleRegSelect');
+
+    // Validate input
+    if (nameInput.value && emailRegInput.value && passwordRegInput.value && roleRegSelect.value) {
+        // Register the user
+        // Code to handle user registration goes here
+        console.log('User registered successfully!');
+        closePopup();
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+
+    </script>
+</body>
+
+</html>

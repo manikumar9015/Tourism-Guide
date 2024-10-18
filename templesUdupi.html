@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking</title>
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <a href="#" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Restaurant Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php" aria-current="page">Home</a></li>
+                <!-- <li><a href="#">Menu</a></li> -->
+                <!-- <li><a href="#">Reservations</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons" style="visibility: hidden;">
+            <a href="#" class="cta"><button id="loginBtn">Login</button></a>
+        </div>
+    </header>
+    <main>
+        <section class="card-container">
+            <div class="card-row">
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">01</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Udupi Shri Krishna Matha</h2>
+                        <p class="card-description">The Udupi Shri Krishna Matha stands as a revered pilgrimage site and a symbol of devotion in Udupi, Karnataka. Dedicated to Lord Krishna, it holds immense spiritual significance for followers of the Vaishnavism tradition. The Matha, or monastery, is believed to have been founded by the 13th-century saint and philosopher Sri Madhvacharya.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://revolvingcompass.com/wp/wp-content/uploads/2023/10/KrishnaTemple_1.jpg" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="krishna.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">02</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Siddhi Vinayaka Temple Anegudde</h2>
+                        <p class="card-description">
+                            The Siddhi Vinayaka Temple in Anegudde, Karnataka, is a revered Hindu shrine dedicated to Lord Ganesha, the remover of obstacles. Situated amidst the picturesque surroundings of Anegudde village, this temple holds immense spiritual significance and attracts devotees from far and wide.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://live.staticflickr.com/5567/14780234783_153e51faed_b.jpg" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="vinayaka.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">03</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Shree Mahalakshmi Devasthana</h2>
+                        <p class="card-description">The Shree Mahalakshmi Devasthana in Uchila, Karnataka, is a revered Hindu temple dedicated to Goddess Mahalakshmi, the goddess of wealth, prosperity, and auspiciousness. Situated in the serene surroundings of Uchila village, this temple holds a special place in the hearts of devotees who come to seek the blessings of the divine goddess.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNacod4Z4BSl7N8UgRTI1J7lyaUmk723-7rasOl=w408-h306-k-no" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="uchila.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">04</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Sri Anantha Padmanabha Temple</h2>
+                        <p class="card-description">The Sri Anantha Padmanabha Temple in Hebri, Karnataka, is a revered Hindu temple dedicated to Lord Anantha Padmanabha, a form of Lord Vishnu. Nestled amidst the lush greenery of Hebri village, this temple holds significant religious importance.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="data:image/jpeg;base64,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" class="tcard-image">
+                    </figure>
+                    <a href="SriAnantha.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+                <article class="card">
+                    <span class="card-number" aria-label="Card Number">04</span>
+                    <div class="card-content">
+                        <h2 class="card-title">Kollur Temple</h2>
+                        <p class="card-description">
+                            The Kollur Mookambika Temple, situated in Kollur, Karnataka, is one of the most revered Hindu temples dedicated to Goddess Mookambika, an incarnation of Goddess Parvati. Nestled amidst the picturesque Western Ghats, this ancient temple holds immense spiritual significance and attracts devotees from all over the country.</p>
+                    </div>
+                    <figure class="card-image-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOfdAqsA4d2J8BF9aY-mB9Oyhldv4GslW2CsQ7T-Y8tw&s" alt="Private Dining Room" class="tcard-image">
+
+                    </figure>
+                    <a href="kollour.html" class="card-cta" aria-label="Learn more">
+                        Look More
+                        <span class="card-cta-icon">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </article>
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="loginForm" method="post" action="login.php">
+                <div class="segment">
+                    <h1>Sign In</h1>
+                </div>
+                <label>
+                    <input type="email" placeholder="Email Address" id="emailInput" name="emailInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" id="passwordInput" name="passwordInput" required>
+                </label>
+                <div class="input-group">
+                    <select id="roleSelect" name="roleSelect" required>
+                        <option value="">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button class="red buttonlog" type="submit">
+                    <i class="icon ion-md-lock"></i> Login
+                </button>
+                <div class="segment">
+                    <p>Don't have an account? <a href="#" id="registerBtn">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Popup -->
+    <div id="registrationPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <form id="registrationForm" method="post" action="register.php">
+                <div class="segment">
+                    <h1>Register</h1>
+                </div>
+                <label>
+                    <input type="text" placeholder="Full Name" id="nameInput" name="nameInput" required>
+                </label>
+                <label>
+                    <input type="email" placeholder="Email Address" id="emailRegInput" name="emailRegInput" required>
+                </label>
+                <label>
+                    <input type="password" placeholder="Password" id="passwordRegInput" name="passwordRegInput" required>
+                </label>
+                <button class="red buttonlog" type="submit">
+                    <i class="icon ion-md-lock"></i> Register
+                </button>
+                <div class="segment">
+                    <p>Already have an account? <a href="#" id="loginPopupBtn">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the login button, registration button, and popup elements
+var loginBtn = document.getElementById('loginBtn');
+var loginPopup = document.getElementById('loginPopup');
+var registrationPopup = document.getElementById('registrationPopup');
+var closeBtn = document.getElementsByClassName('close-btn');
+var registerBtn = document.getElementById('registerBtn');
+var loginPopupBtn = document.getElementById('loginPopupBtn');
+
+// Function to open the login popup
+function openLoginPopup() {
+    loginPopup.style.display = 'block';
+    registrationPopup.style.display = 'none';
+}
+
+// Function to open the registration popup
+function openRegistrationPopup() {
+    registrationPopup.style.display = 'block';
+    loginPopup.style.display = 'none';
+}
+
+// Function to close the login/registration popup
+function closePopup() {
+    loginPopup.style.display = 'none';
+    registrationPopup.style.display = 'none';
+}
+
+// Add event listeners
+loginBtn.addEventListener('click', openLoginPopup);
+registerBtn.addEventListener('click', openRegistrationPopup);
+for (var i = 0; i < closeBtn.length; i++) {
+    closeBtn[i].addEventListener('click', closePopup);
+}
+loginPopupBtn.addEventListener('click', openLoginPopup);
+
+// Close the popup when clicking outside of it
+window.addEventListener('click', function (event) {
+    if (event.target == loginPopup || event.target == registrationPopup) {
+        closePopup();
+    }
+});
+
+// Handle form submission
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var emailInput = document.getElementById('emailInput');
+    var passwordInput = document.getElementById('passwordInput');
+    var roleSelect = document.getElementById('roleSelect');
+
+    // Validate input
+    if (emailInput.value && passwordInput.value && roleSelect.value) {
+        if (roleSelect.value === 'admin') {
+            // Redirect to admin page
+            window.location.href = 'admin.html';
+        } else {
+            // Redirect to user page
+            window.location.href = 'user.html';
+        }
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+
+document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var nameInput = document.getElementById('nameInput');
+    var emailRegInput = document.getElementById('emailRegInput');
+    var passwordRegInput = document.getElementById('passwordRegInput');
+    var roleRegSelect = document.getElementById('roleRegSelect');
+
+    // Validate input
+    if (nameInput.value && emailRegInput.value && passwordRegInput.value && roleRegSelect.value) {
+        // Register the user
+        // Code to handle user registration goes here
+        console.log('User registered successfully!');
+        closePopup();
+    } else {
+        alert('Please fill in all the required fields.');
+    }
+});
+         // Get the modal and its elements
+         const modal = document.getElementById('reservationModal');
+        const closeButton = document.getElementsByClassName('close-button')[0];
+        const reserveButtons = document.querySelectorAll('.card-cta');
+        const costDisplay = document.getElementById('costDisplay');
+
+        // Function to calculate and display the cost
+        function displayCost() {
+            const guests = document.getElementById('guests').value;
+            const cost = guests * 50; // Assuming a cost of $50 per person
+            costDisplay.textContent = `Total Cost: $${cost}`;
+        }
+
+        // Function to open the modal
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Function to handle reservation submission
+        function reserveSeats(event) {
+            event.preventDefault(); // Prevent form submission
+            closeModal(); // Close the modal
+            alert("Seats reserved successfully"); // Display alert message
+        }
+
+        // Add event listeners
+        closeButton.addEventListener('click', closeModal);
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Add event listeners to the "Reserve Now" buttons
+        reserveButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                openModal();
+            });
+        });
+
+        // Add event listener to update the cost on input change
+        document.getElementById('guests').addEventListener('input', displayCost);
+
+        // Add event listener to the submit button inside the modal
+        document.querySelector('.modal button[type="submit"]').addEventListener('click', reserveSeats);
+
+    </script>
+</body>
+</html>

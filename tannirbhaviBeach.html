@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Destination</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #B38C4F; /* Metallic Gold */
+            --text-color: #212121; /* Dark Gray */
+            --secondary-text-color: #757575; /* Light Gray */
+            --bg-color: #F5F5F5; /* Light Background */
+        }
+
+        * {
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.3rem;
+            background-color: #FFFFFF; /* White */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            cursor: pointer;
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-color);
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding: 0 2rem;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            width: 60%;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .map-container {
+            width: 35%;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 15rem;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            border-radius: 5px;
+        }
+
+        .place-info {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .place-info h1 {
+            margin-top: 5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .place-info p {
+            font-size: 1.2rem;
+            color: var(--secondary-text-color);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+        .link{
+            text-align: center;
+            padding-top: 1rem;
+        }
+        .link a{
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+        .link a:hover,
+        .link a:focus {
+            color: var(--primary-color);
+        }   
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" aria-label="Home">
+            <img class="logo" src="logo.jpg" alt="Page Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="login1.php">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="place-info">
+        <h1>Tannirbhavi Beach</h1>
+        <p>Tannirbhavi Beach, nestled along the scenic coastline of Mangalore, stands as a serene oasis of tranquility amidst the bustling cityscape. With its pristine golden sands stretching along the azure waters of the Arabian Sea, Tannirbhavi Beach offers a picturesque retreat for visitors seeking solace and relaxation. Encircled by verdant hills and swaying coconut palms, the beach exudes a sense of serenity and natural beauty that captivates the senses. Its tranquil ambiance provides the perfect backdrop for leisurely strolls along the shoreline, where the gentle lapping of the waves creates a soothing symphony that calms the soul.</p>
+        <p>Moreover, Tannirbhavi Beach is not only a haven for those seeking respite from the rigors of daily life but also a playground for adventure enthusiasts eager to embrace the thrill of aquatic escapades. The crystal-clear waters beckon visitors to partake in an array of exhilarating water sports, including jet skiing, banana boat rides, and parasailing. Adrenaline junkies can ride the waves and feel the rush of excitement coursing through their veins, while families can enjoy picnics on the soft sands or indulge in freshly caught seafood delicacies at the beachside shacks. With its breathtaking natural beauty and diverse recreational opportunities, Tannirbhavi Beach stands as a cherished destination for both locals and tourists alike, offering an unforgettable experience that rejuvenates the body, mind, and spirit.</p>
+        <p>Furthermore, Tannirbhavi Beach is not just a destination for relaxation and adventure; it also holds significant cultural and historical importance. Visitors can explore the remnants of an old Portuguese fort, adding a layer of historical intrigue to their beach experience. Additionally, the beach often serves as a venue for cultural events, including music concerts, beach clean-up drives, and traditional festivals, fostering a sense of community and camaraderie among locals and visitors alike. Whether immersing oneself in the rich history of the region or partaking in vibrant cultural celebrations, Tannirbhavi Beach offers a multifaceted experience that appeals to all interests. As the sun sets over the horizon, painting the sky in hues of orange and pink, the timeless allure of Tannirbhavi Beach continues to captivate hearts and inspire awe, leaving an indelible impression on all who have the privilege to visit.</p>
+    </div>
+
+    <div class="content-container">
+        <div class="photo-gallery">
+            <img src="udupi1.jpg" alt="Udupi Photo 1" data-src="https://karnatakatourism.org/wp-content/uploads/2021/02/my-experience-at-tannirbhav-beach-park-karnataka.jpg">
+            <img src="placeholder.jpg" alt="Udupi Photo 2" data-src="https://cdn.xafari.in/poi-images/poi-images-1637817731110.jpg">
+            <img src="placeholder.jpg" alt="Udupi Photo 3" data-src="https://mangaloretourism.in/images/places-to-visit/header/tannirbhavi-beach-mangalore-tourism-entry-fee-timings-holidays-reviews-header.jpg">
+            <img src="placeholder.jpg" alt="Udupi Photo 4" data-src="https://mangaloretourism.in/images//tourist-places/tannirbhavi-beach-mangalore/tannirbhavi-beach-mangalore-tourism-opening-time-closing.jpg">
+        </div>
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="link">
+                <a href="https://www.google.com/maps/place/Tannirbhavi+Beach/@12.8913011,74.7932745,14z/data=!3m1!4b1!4m6!3m5!1s0x3ba35a91911885a9:0x6a42103fb75e4e93!8m2!3d12.8913022!4d74.8138741!16zL20vMDluNDA0?entry=ttu">Visit Map</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Lazy load images
+        const images = document.querySelectorAll('.photo-gallery img');
+
+        function lazyLoad() {
+            images.forEach(img => {
+                if (img.getBoundingClientRect().top <= window.innerHeight && img.getAttribute('src') !== img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+            });
+        }
+
+        window.addEventListener('scroll', lazyLoad);
+        lazyLoad(); // Load initial images
+
+        // Google Maps Embed API
+        function initMap() {
+            const mapContainer = document.getElementById('map');
+            const mapOptions = {
+                center: { lat:12.891316168578316, lng:74.8138715042056}, // Woodlands Restaurant location
+                zoom: 15,
+            };
+            const map = new google.maps.Map(mapContainer, mapOptions);
+
+            const marker = new google.maps.Marker({
+                position: { lat:12.891316168578316, lng:74.8138715042056},
+                map: map,
+                title: 'Maravanthe Beach',
+            });
+        }
+// , 
+        // Load the Google Maps Embed API script with your API key
+        function loadGoogleMapsAPI() {
+            const apiKey = 'AIzaSyDtRnSSlT48kBs7t2cJbnq51OWV5De_30c'; // Replace with your Google Maps API key
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+            script.async = true;
+            document.body.appendChild(script);
+        }
+
+        // Call the loadGoogleMapsAPI function to initialize the map
+        loadGoogleMapsAPI();
+    </script>
+</body>
+</html>

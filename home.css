@@ -1,0 +1,558 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap);
+@import url(https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css);
+
+:root {
+    --primary-color: #B38C4F;
+    --text-color: #333333;
+    --secondary-text-color: #666666;
+    --bg-color: #F8F8F8;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    cursor: pointer;
+    height: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--primary-color);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* White */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+button:hover,
+button:focus {
+    background-color: #A07B44; /* Darker Metallic Gold */
+    color: #FFFFFF; /* White */
+}
+
+.card-container {
+    max-width: 100%;
+    padding-inline: 2rem;
+    margin: 6rem auto 2rem;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    row-gap: 1rem;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.card-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.card-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 0;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.card-description {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+}
+
+.card-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-height: 50vh;
+    height: auto;
+    position: relative;
+}
+
+.card-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.card-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-image-wrapper:hover .card-image {
+    filter: brightness(1.1);
+}
+
+.card-image-wrapper:hover .card-image-overlay {
+    opacity: 1;
+}
+
+.card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.card-cta:hover,
+.card-cta:focus {
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* White */
+}
+
+.card-cta-icon {
+    transition: transform 0.3s ease;
+}
+
+.card-cta:hover .card-cta-icon,
+.card-cta:focus .card-cta-icon {
+    transform: translateX(3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    header {
+        padding: 1rem;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.875rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .card-description {
+        font-size: clamp(0.875rem, 2vw, 1.125rem);
+    }
+
+    .card-cta {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    padding: 16px;
+    width: 320px;
+    margin: 0 auto;
+}
+
+.segment {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.buttonlog,
+input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+input {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.buttonlog {
+    color: #61677c;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.buttonlog:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.buttonlog:active {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.buttonlog .icon {
+    margin-right: 8px;
+}
+
+.buttonlog.unit {
+    border-radius: 8px;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    font-size: 19.2px;
+}
+
+.buttonlog.unit .icon {
+    margin-right: 0;
+}
+
+.buttonlog.red {
+    display: block;
+    width: 100%;
+    color: #ae1100;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.input-group label {
+    margin: 0;
+    flex: 1;
+}
+
+/* Existing CSS code */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    padding: 16px;
+    width: 320px;
+    margin: 0 auto;
+}
+
+.segment {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.buttonlog,
+input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+input {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.buttonlog {
+    color: #61677c;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.buttonlog:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.buttonlog:active {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.buttonlog .icon {
+    margin-right: 8px;
+}
+
+.buttonlog.unit {
+    border-radius: 8px;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    font-size: 19.2px;
+}
+
+.buttonlog.unit .icon {
+    margin-right: 0;
+}
+
+.buttonlog.red {
+    display: block;
+    width: 100%;
+    color: #ae1100;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.input-group label {
+    margin: 0;
+    flex: 1;
+}
+
+/* Existing CSS code */
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    margin: 0;
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #61677c;
+}
+
+.input-group select {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.input-group select:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
